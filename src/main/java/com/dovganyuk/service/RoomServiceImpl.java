@@ -24,17 +24,9 @@ public class RoomServiceImpl implements RoomService {
     private HotelDao hotelDao;
 
     @Autowired
-    public void setRoomDao(RoomDao roomDao) {
+    public RoomServiceImpl(RoomDao roomDao, UserDao userDao, HotelDao hotelDao) {
         this.roomDao = roomDao;
-    }
-
-    @Autowired
-    public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
-    }
-
-    @Autowired
-    public void setHotelDao(HotelDao hotelDao) {
         this.hotelDao = hotelDao;
     }
 

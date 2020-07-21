@@ -24,17 +24,9 @@ public class HotelController {
     private UserService userService;
 
     @Autowired
-    public void setHotelService(HotelService hotelService) {
+    public HotelController(HotelService hotelService, RoomService roomService, UserService userService) {
         this.hotelService = hotelService;
-    }
-
-    @Autowired
-    public void setRoomService(RoomService roomService) {
         this.roomService = roomService;
-    }
-
-    @Autowired
-    public void setUserService(UserService userService) {
         this.userService = userService;
     }
 

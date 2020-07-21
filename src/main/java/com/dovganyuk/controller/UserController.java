@@ -21,22 +21,10 @@ public class UserController {
     private HotelService hotelService;
 
     @Autowired
-    public void setUserService(UserService userService) {
+    public UserController(UserService userService, SecurityService securityService, UserValidator userValidator, HotelService hotelService) {
         this.userService = userService;
-    }
-
-    @Autowired
-    public void setSecurityService(SecurityService securityService) {
         this.securityService = securityService;
-    }
-
-    @Autowired
-    public void setUserValidator(UserValidator userValidator) {
         this.userValidator = userValidator;
-    }
-
-    @Autowired
-    public void setHotelService(HotelService hotelService) {
         this.hotelService = hotelService;
     }
 
